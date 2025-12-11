@@ -17,7 +17,7 @@ export default function MenuHeader() {
         top: scrollUp ? "128px" : 0,
       }}
       transition={{ duration: 0.3 }} className="fixed top-32 w-full border-b border-b-neutral-300">
-      <div className="py-3 sm:w-[80%] w-[90%] flex items-center mx-auto text-xl gap-x-8">
+      <div className="py-3 sm:w-[80%] w-[90%] flex items-center mx-auto text-xl gap-x-5">
         <motion.div whileTap={{ scale: 0.95 }}>
           <div className="cursor-pointer flex items-center gap-x-2 transition-all duation-200 hover:bg-blue-600 hover:text-white rounded-xl px-3 py-4">
             <Users2Icon />
