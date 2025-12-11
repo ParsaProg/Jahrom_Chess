@@ -15,7 +15,7 @@ export default function Header() {
         y: scrollUp ? 0 : -100,
         opacity: scrollUp ? 1 : 0,
       }}
-      transition={{ duration: 0.3 }} className="w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300">
+      transition={{ duration: 0.3 }} className="bg-[#ffffff57] backdrop-blur-3xl w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300">
       <div className="sm:w-[80%] w-[90%] mx-auto py-3 flex items-center justify-between">
         <div className="flex items-center gap-x-2">
           <Image
