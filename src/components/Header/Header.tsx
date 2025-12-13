@@ -1,7 +1,7 @@
 "use client";
 
 import Logo from "@/public/svg/logo.svg";
-import { Code2, PhoneCall, Search, UsersRound } from "lucide-react";
+import { Code2, PhoneCall, Search } from "lucide-react";
 import Image from "next/image";
 import convertToFarsiNumbers from "../../functions/EnToFnNumbers";
 import useScrollDirection from "@/src/hooks/useScrollDirection";
@@ -10,13 +10,15 @@ import { motion } from "framer-motion";
 export default function Header() {
   const scrollUp = useScrollDirection();
   return (
-  
-    <motion.div animate={{
+    <motion.div
+      animate={{
         y: scrollUp ? 0 : -100,
         opacity: scrollUp ? 1 : 0,
       }}
-      transition={{ duration: 0.3 }} className="bg-[#ffffff57] backdrop-blur-3xl w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300">
-      <div className="sm:w-[80%] w-[90%] mx-auto py-3 flex items-center justify-between">
+      transition={{ duration: 0.3 }}
+      className="bg-[#ffffffa1] backdrop-blur-sm w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300"
+    >
+      <div className=" w-[90%] mx-auto py-3 flex items-center justify-between">
         <div className="flex items-center gap-x-2">
           <Image
             width={800}
