@@ -1,3 +1,26 @@
-.swiper-pagination-bullet {
-  display: none !important;
+.swiper {
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  overflow: visible !important;
+  height: auto;
+}
+
+
+.swiper-button-prev-custom::after,
+.swiper-button-next-custom::after {
+  content: '';
+}
+
+.swiper-button-prev-custom {
+  right: -20px;
+}
+
+.swiper-button-next-custom {
+  left: -20px;
 }
