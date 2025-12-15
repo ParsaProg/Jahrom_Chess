@@ -1,4 +1,5 @@
 import ChessRefrences from "@/src/components/landing/ChessRefrences";
+import GallerySection from "@/src/components/landing/GallerySection";
 import HotestNews from "@/src/components/landing/HotestNews";
 import NewsList from "@/src/components/landing/NewsList";
 import NewsSlider from "@/src/components/landing/NewsSlider";
@@ -11,6 +12,7 @@ export default function Home(){
       <NewsList />
     </div>
     <ChessRefrences />
+    <GallerySection />
     <div className="mt-100"></div>
   </div>
 }
