@@ -19,16 +19,6 @@ body {
   font-weight: 800;
 }
 
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-  width: 30px !important;
-  border-radius: 100px !important;
-  background-color: #0097A7 !important;
-  transition: 0.1s ease;
-  z-index: 2000 !important;
-}
-
-.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-  background-color: rgba(255, 255, 255, 0.525) !important;
-  transition: 0.1s ease;
-  z-index: 2000 !important;
+.swiper-pagination-bullet {
+  display: none !important;
 }
