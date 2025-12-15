@@ -24,7 +24,11 @@ export default function NewsSlider() {
       <LandingSectionsTitle title="اخبار امروز" />
       <div className="relative w-full h-[500px] rounded-xl ">
         <Swiper
-          onSlideChange={(e: any) => setPictureIndex(e.activeIndex)}
+          onSlideChange={() =>
+            swiperRef.current
+              ? setPictureIndex(swiperRef.current["realIndex"])
+              : setPictureIndex(0)
+          }
           loop={true}
           modules={[Navigation, Pagination]}
           spaceBetween={10}
@@ -64,6 +68,7 @@ export default function NewsSlider() {
         <motion.div
           onClick={() => swiperRef.current.slideNext()}
           whileTap={{ scale: 0.95 }}
+          
           className="z-2 flex items-center justify-center absolute top-[45%] translate-y-[-50%] rounded-full p-3 text-white backdrop-blur sm bg-[#00000074] left-1"
         >
           <ChevronLeft size={25} />
