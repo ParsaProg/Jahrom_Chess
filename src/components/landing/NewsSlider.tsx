@@ -9,13 +9,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import {
-  ArrowLeft,
-  ArrowRight,
-  CalendarRange,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { CalendarRange, ChevronLeft, ChevronRight } from "lucide-react";
 import convertToFarsiNumbers from "@/src/functions/EnToFnNumbers";
 import { motion } from "framer-motion";
 
@@ -30,8 +24,8 @@ export default function NewsSlider() {
       <LandingSectionsTitle title="اخبار امروز" />
       <div className="relative w-full h-[500px] rounded-xl ">
         <Swiper
+          onSlideChange={(e: any) => setPictureIndex(e.activeIndex)}
           loop={true}
-          autoplay={true}
           modules={[Navigation, Pagination]}
           spaceBetween={10}
           slidesPerView={1}
@@ -48,6 +42,18 @@ export default function NewsSlider() {
             <News fakeImages={fakeImage} />
           </SwiperSlide>
         </Swiper>
+        <div className="absolute bottom-4 right-[50%] translate-x-[50%] flex items-center gap-x-1 z-200">
+          {[1, 2, 3].map((item, index) => {
+            return (
+              <div
+                key={index}
+                className={`rounded-full w-2 h-2 ${
+                  pictureIndex === index ? "w-8 bg-[#0097A7]" : "bg-neutral-700"
+                } transition-all duration-200`}
+              ></div>
+            );
+          })}
+        </div>
         <motion.div
           onClick={() => swiperRef.current.slidePrev()}
           whileTap={{ scale: 0.95 }}
