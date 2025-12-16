@@ -16,7 +16,7 @@ export default function Header() {
         opacity: scrollUp ? 1 : 0,
       }}
       transition={{ duration: 0.3 }}
-      className="bg-[#ffffffa1] backdrop-blur-sm w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300"
+      className="bg-[#ffffffdd] backdrop-blur-sm w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300"
     >
       <div className=" w-[90%] mx-auto py-3 flex items-center justify-between">
         <div className="flex items-center gap-x-2">
