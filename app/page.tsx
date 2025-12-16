@@ -6,7 +6,7 @@ import NewsSlider from "@/src/components/landing/NewsSlider";
 
 export default function Home(){
   return <div className="flex flex-col gap-y-14 mx-auto w-[90%]">
-    <div className="flex items-start w-full gap-x-5 ">
+    <div className="flex items-start w-full gap-x-5">
       <HotestNews />
       <NewsSlider />
       <NewsList />
