@@ -99,7 +99,7 @@ const GallerySection = () => {
 
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
-      <LandingSectionsTitle title="گالری تصاویر" />
+      <LandingSectionsTitle isBetween openLink="/gallery" title="گالری تصاویر" />
       <div className="flex items-center justify-between w-full">
         <Swiper
           onSlideChange={(swiper) => {
@@ -113,7 +113,6 @@ const GallerySection = () => {
           spaceBetween={30}
           onSwiper={(sw) => {
             swiperRef.current = sw;
-            // محاسبه اولیه تعداد صفحات
             const slidesCount = galleryList.length;
             const pages = Math.ceil(slidesCount / slidePerView);
             setTotalSlides(pages);
