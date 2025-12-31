@@ -3,6 +3,7 @@ import GallerySection from "@/src/components/landing/GallerySection";
 import HotestNews from "@/src/components/landing/HotestNews";
 import NewsList from "@/src/components/landing/NewsList";
 import NewsSlider from "@/src/components/landing/NewsSlider";
+import TournamentLandingSection from "@/src/components/landing/TournamentSection";
 
 export default function Home(){
   return <div className="flex flex-col gap-y-14 mx-auto w-[90%]">
@@ -13,6 +14,7 @@ export default function Home(){
     </div>
     <ChessRefrences />
     <GallerySection />
+    <TournamentLandingSection />
     <div className="mt-100"></div>
   </div>
 }
