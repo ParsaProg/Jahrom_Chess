@@ -15,6 +15,6 @@ export default function Home(){
     <ChessRefrences />
     <GallerySection />
     <TournamentLandingSection />
-    <div className="mt-100"></div>
+    
   </div>
 }
