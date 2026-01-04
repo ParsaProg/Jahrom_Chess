@@ -30,7 +30,7 @@ export default function HotestNews() {
             <CalendarRange size={18}/>
             <h5 className="text-sm">{convertToFarsiNumbers("تاریخ انتشار: 1404/09/08")}</h5>
           </div>
-        </div>30
+        </div>
       </div>
     </div>
   );
