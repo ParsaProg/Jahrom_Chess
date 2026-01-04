@@ -98,7 +98,7 @@ const GallerySection = () => {
   };
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8">
+    <div className="w-full ">
       <LandingSectionsTitle isBetween openLink="/gallery" title="گالری تصاویر" />
       <div className="flex items-center justify-between w-full">
         <Swiper
