@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import useScrollDirection from "@/src/hooks/useScrollDirection";
+import Link from "next/link";
 
 export default function MenuHeader() {
   const scrollUp = useScrollDirection();
@@ -21,7 +22,7 @@ export default function MenuHeader() {
       transition={{ duration: 0.3 }}
       className=" z-100000 bg-[#ffffffdd] backdrop-blur-sm fixed top-32 w-full border-b border-t border-b-neutral-300 border-t-neutral-300"
     >
-      <div className="py-3 w-[90%] flex items-center mx-auto text-lg gap-x-3">
+      <Link href={"/news"} className="py-3 w-[90%] flex items-center mx-auto text-lg gap-x-3">
         <motion.div whileTap={{ scale: 0.95 }}>
           <div className="cursor-pointer flex items-center gap-x-2 transition-all duation-200 hover:bg-blue-600 hover:text-white rounded-xl px-3 py-3">
             <Newspaper size={20} />
@@ -62,7 +63,7 @@ export default function MenuHeader() {
             گالری تصاویر
           </div>
         </motion.div>
-      </div>
+      </Link>
     </motion.div>
   );
 }
