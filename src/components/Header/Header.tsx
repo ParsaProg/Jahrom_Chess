@@ -44,13 +44,13 @@ export default function Header() {
               placeholder="جستجو در میان اخبار..."
             />
           </div>
-          <button className="p-3 rounded-xl flex items-center gap-x-2 text-blue-600 border border-neutral-300 font-thin">
+          <motion.button whileTap={{scale: 0.95}} className="p-3 rounded-xl flex items-center gap-x-2 text-blue-600 border border-neutral-300 font-thin">
             {convertToFarsiNumbers("09173915784")} <PhoneCall size={18} />
-          </button>{" "}
-          <button className="p-3 rounded-xl flex items-center gap-x-2 bg-blue-600 text-white font-thin">
+          </motion.button>{" "}
+          <motion.button whileTap={{scale: 0.95}} className="p-3 rounded-xl flex items-center gap-x-2 bg-blue-600 text-white font-thin">
             <Code2 />
             دربارۀ برنامه‌نویس
-          </button>
+          </motion.button>
         </div>
       </div>
     </motion.div>
