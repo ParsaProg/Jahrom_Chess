@@ -53,7 +53,7 @@ export default function NewsList() {
       <div className="opacity-0">
         <LandingSectionsTitle title="" />
       </div>
-    <div className="relative w-[400px] h-[500px] p-2 rounded-xl border-t-3 border-t-[#0097A7] bg-[#f5f0f0] flex flex-col items-center gap-y-3">
+    <div className="relative w-[350px] h-[500px] p-2 rounded-xl border-t-3 border-t-[#0097A7] bg-[#f5f0f0] flex flex-col items-center gap-y-3">
         <h1 className="font-bold text-xl text-[#0097A7] mt-3">
           {" "}
           لیست اخبار موجود
