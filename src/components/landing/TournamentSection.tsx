@@ -43,17 +43,15 @@ export default function TournamentLandingSection() {
         </div>
         <div className="h-[500px] flex flex-col gap-y-[10px]">
           <div className="flex items-center gap-x-5 h-[295px]">
-            <div className="w-[400px] h-[295px] overflow-hidden rounded-xl">
-              <Image
-                className="w-full h-auto"
-                draggable={false}
-                width={800}
-                height={800}
-                unoptimized
-                src={srcImage}
-                alt="برد علیرضا فیروزجا در مسابقات"
-              />
-            </div>
+            <div
+              style={{
+                backgroundImage:
+                  "url(https://dims.apnews.com/dims4/default/ae0dc39/2147483647/strip/true/crop/4000x2666+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd0%2Fea%2Fe5e11fbf0f5c260a281c6959af29%2F4bc14eada9484c03a9a88da0d8329e6a)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className="w-[400px] h-[295px] overflow-hidden rounded-xl"
+            ></div>
             <div className="flex flex-col gap-y-2">
               <h5 className="text-sm text-neutral-800 font-bold">
                 مسابقات شطرنج فیده
@@ -77,7 +75,7 @@ export default function TournamentLandingSection() {
                     backgroundImage: `url(${srcImage})`,
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
-                    backgroundSize: "100%",
+                    backgroundSize: "cover",
                   }}
                 ></div>
                 <h1 className="text-neutral-800 text-md font-thin">
@@ -91,17 +89,15 @@ export default function TournamentLandingSection() {
             </div>
           </div>
           <div className="flex flex-row-reverse items-center gap-x-5 h-[295px]">
-            <div className="w-[400px] h-[295px] overflow-hidden rounded-xl">
-              <Image
-                className="w-full h-auto"
-                draggable={false}
-                width={800}
-                height={800}
-                unoptimized
-                src={srcImage}
-                alt="برد علیرضا فیروزجا در مسابقات"
-              />
-            </div>
+            <div
+              style={{
+                backgroundImage:
+                  "url(https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/TarjeiJS/phpVTwBPb.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              className="w-[400px] h-[295px] overflow-hidden rounded-xl"
+            ></div>
             <div className="flex flex-col gap-y-2">
               <h5 className="text-sm text-neutral-800 font-bold">
                 مسابقات شطرنج فیده
@@ -122,10 +118,10 @@ export default function TournamentLandingSection() {
                 <div
                   className="rounded-full w-10 h-10 border border-neutral-500"
                   style={{
-                    backgroundImage: `url(${srcImage})`,
+                    backgroundImage: `url(https://www.chess.com/bundles/web/images/social/share-news.f0cb71ce.png)`,
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
-                    backgroundSize: "100%",
+                    backgroundSize: "cover",
                   }}
                 ></div>
                 <h1 className="text-neutral-800 text-md font-thin">
