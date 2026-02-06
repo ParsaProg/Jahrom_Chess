@@ -4,7 +4,7 @@ import "./globals.css";
 import MenuHeader from "@/src/components/Header/MenuHeader";
 import Footer from "@/src/components/Footer/Footer";
 
-const title = "وبسایت رسمی شطرنج شهرستان جهرم";
+const title = "هیات شطرنج جهرم | صفحه اصلی";
 const desc = "وبسایت رسمی شطرنج شهرستان جهرم، اخبار | گالری | مسابقات و ...";
 
 export const metadata: Metadata = {
