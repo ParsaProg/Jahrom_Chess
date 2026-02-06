@@ -6,6 +6,7 @@ import Image from "next/image";
 import convertToFarsiNumbers from "../../functions/EnToFnNumbers";
 import useScrollDirection from "@/src/hooks/useScrollDirection";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const scrollUp = useScrollDirection();
@@ -19,7 +20,7 @@ export default function Header() {
       className="bg-[#ffffffdd] backdrop-blur-sm w-full sticky z-100000 top-0 right-0 border-b border-b-neutral-300"
     >
       <div className=" w-[90%] mx-auto py-3 flex items-center justify-between">
-        <div className="flex items-center gap-x-2">
+        <Link href={"/"}  className="flex items-center gap-x-2">
           <Image
             width={800}
             height={800}
@@ -31,7 +32,7 @@ export default function Header() {
           <h1 className="font-bold text-2xl">
             هیات شطرنج شهرستان <strong className="text-blue-600">جهرم</strong>
           </h1>
-        </div>
+        </Link>
         <div className="flex items-center gap-x-5">
           <div className="group relative w-[300px] p-3 rounded-xl bg-slate-100 border border-slate-200">
             <div className="group-focus-within:ring-2 group-focus-within:ring-offset-4 group-focus-within:ring-blue-600 ring-offset-white absolute inset-0 rounded-xl -z-1 transition-all duration-200"></div>
