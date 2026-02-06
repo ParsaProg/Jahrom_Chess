@@ -20,7 +20,7 @@ export default function NewsSlider() {
     "https://dims.apnews.com/dims4/default/4c6da07/2147483647/strip/true/crop/5472x3648+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F3b%2F0e%2F3c9b8fc76a8a35fba954f9c8fd0f%2F73884efa4b80421fb2b235f245be3e29",
   ];
   return (
-    <div className="w-full flex flex-col items-start gap-y-5 overflow-hidden">
+    <div className="min-[1500px]:w-[calc(100%-(400px+350px+40px))] flex flex-col items-start gap-y-5 overflow-hidden">
       <LandingSectionsTitle title="اخبار امروز" />
       <div className="relative w-full h-[500px] rounded-xl ">
         <Swiper
