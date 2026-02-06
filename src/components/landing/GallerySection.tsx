@@ -210,7 +210,7 @@ const GalleryItem = ({
 }) => {
   return (
     <motion.div 
-      className="mt-8 transition-all duration-200 hover:scale-[1.01] cursor-pointer hover:shadow-[#00000050] hover:-translate-y-3 shadow-[0px_0px_15px_2px] shadow-[#0000002f] w-full pb-3 flex flex-col rounded-xl overflow-hidden mb-8"
+      className="mt-4 transition-all duration-200 hover:scale-[1.02 ] cursor-pointer hover:shadow-[#00000050] shadow-[0px_0px_15px_2px] shadow-[#0000002f] w-full pb-3 flex flex-col rounded-xl overflow-hidden mb-8"
       whileHover={{ y: -5 }}
     >
       <div className="relative w-full h-[280px]">
