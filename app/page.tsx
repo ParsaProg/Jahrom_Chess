@@ -5,16 +5,17 @@ import NewsList from "@/src/components/landing/NewsList";
 import NewsSlider from "@/src/components/landing/NewsSlider";
 import TournamentLandingSection from "@/src/components/landing/TournamentSection";
 
-export default function Home(){
-  return <div className="flex flex-col gap-y-14 mx-auto w-[90%]">
-    <div className="flex items-start w-full gap-x-5">
-      <HotestNews />
-      <NewsSlider />
-      <NewsList />
+export default function Home() {
+  return (
+    <div className="flex flex-col gap-y-14 mx-auto w-[90%]">
+      <div className="flex flex-wrap items-start w-full gap-5">
+        <HotestNews />
+        <NewsSlider />
+        <NewsList />
+      </div>
+      <ChessRefrences />
+      <GallerySection />
+      <TournamentLandingSection />
     </div>
-    <ChessRefrences />
-    <GallerySection />
-    <TournamentLandingSection />
-    
-  </div>
+  );
 }
