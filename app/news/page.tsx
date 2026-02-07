@@ -18,13 +18,19 @@ export default function News() {
           })}
         </div>
       </section>
-      <section className="flex flex-col">
+      <section className="flex flex-col w-full">
         <div className="flex items-center gap-x-2">
           <div className="bg-blue-600 h-7 w-2 rounded-xs"></div>
           <h1 className="font-bold text-xl">همه‌ی اخبار</h1>
         </div>
-        <div className="flex items-start gap-x-5 mt-5">
+        <div className="w-full flex items-start gap-x-5 mt-5">
           <ModernFirstNewsContainer />
+          <RegularNewsContainter />
+        </div>
+        <div className="w-full grid grid-cols-3 mt-5 gap-5">
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((validateHeaderName, _I) => {
+            return <RegularNewsContainter isInGrid={true} key={_I}/>
+          })}
         </div>
       </section>
     </div>
@@ -65,7 +71,7 @@ function HotestNewsContainer() {
 
 function ModernFirstNewsContainer() {
   return (
-    <div className="relative cursor-pointer group w-[700px] h-[450px] rounded-md overflow-hidden">
+    <div className="relative cursor-pointer group w-[70%] h-[450px] rounded-md overflow-hidden">
       <div
         style={{
           backgroundImage:
@@ -78,8 +84,8 @@ function ModernFirstNewsContainer() {
       ></div>
       <div className="absolute w-full h-[450px] top-0 right-0 bg-linear-to-b to-70% from-[#fff0] to-[#000dff21] z-2"></div>
       <div className="px-4 py-2 z-3 backdrop-blur-sm border border-slate-300 text-sm rounded-full text-white absolute top-5 right-5 flex items-center gap-x-2">
-      <Code2Icon size={18}/>
-       تکنولوژی
+        <Code2Icon size={18} />
+        تکنولوژی
       </div>
       <div className="z-4 absolute bottom-5 right-5 left-5 w-full h-auto text-white flex flex-col gap-y-3">
         <h1 className="text-2xl font-bold leading-[30px]">
@@ -99,11 +105,49 @@ function ModernFirstNewsContainer() {
             }}
             className="rounded-full w-7 h-7"
           ></div>
-          <h1 className=" font-thin text-md">نوشته شده توسط پارسا شعبانی</h1>|
-          <h1 className=" font-thin text-md">
+          <h1 className=" font-thin text-sm">نوشته شده توسط پارسا شعبانی</h1>|
+          <h1 className=" font-thin text-sm">
             {convertToFarsiNumbers("11 ساعت پیش")}
           </h1>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function RegularNewsContainter({isInGrid}: {isInGrid?: boolean}) {
+  return (
+    <div className={`flex flex-col items-start ${isInGrid? "w-full": "w-[40%]"} h-auto gap-y-3`}>
+      <div
+        style={{
+          backgroundImage:
+            "url(https://static.digiato.com/digiato/2026/02/trump-phone-t1-specs-price-made-in-usa-changes-2-414x233.jpg.webp)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+        className="w-full rounded-md h-[250px]"
+      ></div>
+      <h1 className="font-bold text-lg">
+        انتشار اولین تصویر واقعی از گوشی ترامپ که دیگر ساخت آمریکا نیست
+      </h1>
+      <h3 className="text-md text-neutral-800">
+        این گوشی دیگر کاملا ساخت آمریکا نیست و قیمت آن افزایش یافته است
+      </h3>
+      <div className="flex items-center gap-x-2">
+        <div
+          style={{
+            backgroundImage:
+              "url(https://digiato.com/wp-content/uploads/avatars/308816-1770357878-32x32.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          className="rounded-full w-7 h-7"
+        ></div>
+        <h1 className=" font-thin text-sm">نوشته شده توسط پارسا شعبانی</h1>|
+        <h1 className=" font-thin text-sm">
+          {convertToFarsiNumbers("4 ساعت پیش")}
+        </h1>
       </div>
     </div>
   );
