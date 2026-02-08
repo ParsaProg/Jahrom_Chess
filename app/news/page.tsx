@@ -28,8 +28,9 @@ export default function News() {
           <RegularNewsContainter />
         </div>
         <div className="w-full grid grid-cols-3 mt-5 gap-5">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((validateHeaderName, _I) => {
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value, _I) => {
             return <RegularNewsContainter isInGrid={true} key={_I}/>
+            
           })}
         </div>
       </section>
@@ -48,16 +49,12 @@ function HotestNewsContainer() {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="rounded-md w-[180px] h-[180px] overflow-hidden"
+        className="rounded-md w-[100px] h-[100px] overflow-hidden"
       ></div>
       <div className="flex flex-col items-start gap-y-2">
-        <h1 className="text-black text-lg font-bold leading-relaxed w-[350px]">
+        <h1 className="text-black text-lg font-bold leading-relaxed w-[300px]">
           برترین زن شطرنج باز دنیا، از عرصه‌ی شطرنج خداحافظی کرد
         </h1>
-        <h3 className="text-slate-800 text-md font-bold leading-[29px] w-[350px] ">
-          جودیت پولگار، اسطوره شطرنج جهان و برترین شطرنج‌باز زن تمام ادوار، به
-          صورت رسمی از رقابت‌های حرفه‌ای خداحافظی کرد.
-        </h3>
         <div className="flex text-slate-800 items-center gap-x-2">
           <CalendarRange size={18} className="-mt-1" />
           <h5 className="text-sm font-thin">
@@ -87,7 +84,7 @@ function ModernFirstNewsContainer() {
         <Code2Icon size={18} />
         تکنولوژی
       </div>
-      <div className="z-4 absolute bottom-5 right-5 left-5 w-full h-auto text-white flex flex-col gap-y-3">
+      <div className="z-4 absolute bottom-5 px-5 w-full h-auto text-white flex flex-col gap-y-3">
         <h1 className="text-2xl font-bold leading-[30px]">
           اپل احتمال دارد تا هفته ی آینده آیفون 18 عرضه کند
         </h1>
