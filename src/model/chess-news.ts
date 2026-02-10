@@ -1,4 +1,5 @@
 export interface ChessNewsModelInterface {
+  id: number;
   title: string;
   description: string;
   picture: string;
@@ -10,6 +11,7 @@ export interface ChessNewsModelInterface {
 
 export const ChessNews: ChessNewsModelInterface[] = [
   {
+    id: 1,
     title: "مگنوس کارلسن قهرمان مسابقات سریع‌بازی 2024 شد",
     description:
       "مگنوس کارلسن با عملکرد درخشان خود در مسابقات سریع‌بازی دبی، عنوان قهرمانی را از آن خود کرد و برتری خود را در شطرنج سریع تثبیت نمود.",
@@ -20,6 +22,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 2,
     title: "نوجوان ایرانی به جمع ۱۰۰ بازیکن برتر جهان صعود کرد",
     description:
       "پرهام مقصودی، نوجوان ۱۶ ساله ایرانی، با کسب امتیاز ۲۶۰۰ در رنکینگ فیده، برای اولین بار وارد جمع ۱۰۰ بازیکن برتر جهان شد.",
@@ -29,6 +32,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 3,
     title: "انتشار کتاب جدیدی در مورد گشایش سیسیلی",
     description:
       "استاد بزرگ ویسواناتان آناند کتابی جامع در مورد گشایش سیسیلی منتشر کرده که تحلیل‌های عمیقی از واریانت‌های مدرن این گشایش ارائه می‌دهد.",
@@ -38,6 +42,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 4,
     title: "شطرنج آنلاین؛ رشد ۴۰ درصدی کاربران در سال گذشته",
     description:
       "بررسی‌ها نشان می‌دهد پلتفرم‌های شطرنج آنلاین با رشد چشمگیر ۴۰ درصدی کاربران در سال ۲۰۲۳ مواجه شده‌اند.",
@@ -47,6 +52,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 5,
     title: "رقابت تاریخی بین دو هوش مصنوعی شطرنج",
     description:
       "در رقابتی جالب توجه، دو موتور قوی شطرنج AlphaZero و Stockfish در ۱۰۰ بازی متوالی به رقابت پرداختند که نتایج شگفت‌انگیزی داشت.",
@@ -56,6 +62,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 6,
     title: "آغاز دوره جدید مربی‌گری شطرنج در فدراسیون",
     description:
       "فدراسیون شطرنج ایران دوره جدید مربی‌گری درجه ۲ را با حضور ۳۰ داوطلب از سراسر کشور آغاز کرد.",
@@ -65,6 +72,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 7,
     title: "تغییرات مهم در قوانین مسابقات سریع‌بازی",
     description:
       "اتحادیه جهانی شطرنج قوانین جدیدی برای مسابقات سریع‌بازی و برق‌آسا تصویب کرده که از فصل آینده اجرایی خواهد شد.",
@@ -74,6 +82,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 8,
     title: "بازنشستگی استاد بزرگ ۶۰ ساله پس از نیم قرن فعالیت",
     description:
       "بوریس گلفاند، استاد بزرگ اسرائیلی، پس از ۵۰ سال حضور در عرصه حرفه‌ای شطرنج، خداحافظی خود را از رقابت‌های رسمی اعلام کرد.",
@@ -83,6 +92,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 9,
     title: "مسابقات بین‌المللی شطرنج دانشگاه‌های جهان در تهران",
     description:
       "برای اولین بار، مسابقات شطرنج دانشگاه‌های جهان به میزبانی دانشگاه تهران برگزار خواهد شد.",
@@ -92,6 +102,7 @@ export const ChessNews: ChessNewsModelInterface[] = [
     cat: "شطرنج",
   },
   {
+    id: 10,
     title: "رکورد جدید در مسابقات همزمان شطرنج",
     description:
       "استاد بزرگ ماکسیم واشیر لاگراو رکورد جدیدی در بازی همزمان با ۱۰۰ بازیکن ثبت کرد و در ۹۸ بازی پیروز شد.",
