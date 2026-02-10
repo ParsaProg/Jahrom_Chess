@@ -2,6 +2,7 @@ import convertToFarsiNumbers from "@/src/functions/EnToFnNumbers";
 import { RegularNewsContainer } from "@/src/interfaces/regular-news-card";
 import { ChessNews, ChessNewsModelInterface } from "@/src/model/chess-news";
 import { CalendarRange, Captions, Code2Icon } from "lucide-react";
+import Link from "next/link";
 
 export default function News() {
   return (
@@ -41,6 +42,7 @@ export default function News() {
 }
 
 function HotestNewsContainer({
+  id,
   title,
   date,
   picture,
@@ -48,9 +50,13 @@ function HotestNewsContainer({
   title: string;
   date: string;
   picture: string;
+  id: number;
 }) {
   return (
-    <div className="flex items-center gap-x-3 mt-2 w-full">
+    <Link
+      href={`/news/${id}`}
+      className="flex items-center gap-x-3 mt-2 w-full"
+    >
       <div
         style={{
           backgroundImage: `url(${picture})`,
@@ -58,7 +64,7 @@ function HotestNewsContainer({
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
-        className="rounded-md w-[80px] sm:w-[100px] h-[80px] sm:h-[100px] flex-shrink-0 overflow-hidden"
+        className="rounded-md w-20 sm:w-[100px] h-20 sm:h-[100px] shrink-0 overflow-hidden"
       ></div>
       <div className="flex flex-col items-start gap-y-2 flex-1 min-w-0">
         <h1 className="text-black text-base sm:text-lg font-bold leading-relaxed line-clamp-2">
@@ -66,14 +72,17 @@ function HotestNewsContainer({
         </h1>
         <div className="flex text-slate-800 items-center gap-x-2">
           <CalendarRange size={18} className="-mt-1" />
-          <h5 className="text-xs sm:text-sm font-thin">{convertToFarsiNumbers(date)}</h5>
+          <h5 className="text-xs sm:text-sm font-thin">
+            {convertToFarsiNumbers(date)}
+          </h5>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 function ModernFirstNewsContainer({
+  id,
   title,
   description,
   picture,
@@ -82,7 +91,10 @@ function ModernFirstNewsContainer({
   cat,
 }: ChessNewsModelInterface) {
   return (
-    <div className="relative cursor-pointer group w-full md:w-[70%] h-[350px] sm:h-[400px] md:h-[450px] rounded-md overflow-hidden">
+    <Link
+      href={`/news/${id}`}
+      className="relative cursor-pointer group w-full md:w-[70%] h-[350px] sm:h-[400px] md:h-[450px] rounded-md overflow-hidden"
+    >
       <div
         style={{
           backgroundImage: `url(${picture})`,
@@ -115,18 +127,22 @@ function ModernFirstNewsContainer({
               }}
               className="rounded-full w-6 h-6 sm:w-7 sm:h-7"
             ></div>
-            <h1 className="font-thin text-xs sm:text-sm">نوشته شده توسط {author}</h1>|
+            <h1 className="font-thin text-xs sm:text-sm">
+              نوشته شده توسط {author}
+            </h1>
+            |
             <h1 className="font-thin text-xs sm:text-sm">
               {convertToFarsiNumbers(date.toString())}
             </h1>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
 function RegularNewsContainter({
+  id,
   isInGrid,
   title,
   description,
@@ -136,7 +152,8 @@ function RegularNewsContainter({
   cat,
 }: RegularNewsContainer) {
   return (
-    <div
+    <Link
+      href={`/news/${id}`}
       className={`flex flex-col items-start ${isInGrid ? "w-full" : "w-full md:w-[40%]"} h-auto gap-y-3`}
     >
       <div
@@ -148,9 +165,7 @@ function RegularNewsContainter({
         }}
         className="w-full rounded-md h-[200px] sm:h-[250px]"
       ></div>
-      <h1 className="font-bold text-base sm:text-lg line-clamp-2">
-        {title}
-      </h1>
+      <h1 className="font-bold text-base sm:text-lg line-clamp-2">{title}</h1>
       <h3 className="text-sm sm:text-md text-neutral-800 line-clamp-3">
         {description}
       </h3>
@@ -164,11 +179,14 @@ function RegularNewsContainter({
           }}
           className="rounded-full w-6 h-6 sm:w-7 sm:h-7"
         ></div>
-        <h1 className="font-thin text-xs sm:text-sm">نوشته شده توسط {author}</h1>|
+        <h1 className="font-thin text-xs sm:text-sm">
+          نوشته شده توسط {author}
+        </h1>
+        |
         <h1 className="font-thin text-xs sm:text-sm">
           {convertToFarsiNumbers(date)}
         </h1>
       </div>
-    </div>
+    </Link>
   );
 }
