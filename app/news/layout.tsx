@@ -1,9 +1,16 @@
 import { Metadata } from "next";
 
+const title = "هیات شطرنج جهرم | صفحه اخبار";
+const description =
+  "اخبار شطرنج شهرستان جهرم، روز، داغ ترین و مسابقات را در این صفحه دنبال کنید";
+
 export const metadata: Metadata = {
-  title: "هیات شطرنج جهرم | صفحه اخبار",
-  description:
-    "اخبار شطرنج شهرستان جهرم، روز، داغ ترین و مسابقات را در این صفحه دنبال کنید",
+  title: title,
+  description: description,
+  openGraph: {
+    title: title,
+    description: description,
+  },
 };
 
 export default function RootLayout({
