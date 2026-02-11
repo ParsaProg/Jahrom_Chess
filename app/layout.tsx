@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`antialiased mx-auto`}>
         <Header />
         <MenuHeader />
-        <div className="h-[120px]"></div>
+        <div className="min-[1357px]:h-[230px] h-[120px]"></div>
         {children}
         <Footer />
       </body>
