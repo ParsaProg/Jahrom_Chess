@@ -16,13 +16,11 @@ import { motion } from "framer-motion";
 export default function NewsSlider() {
   const [pictureIndex, setPictureIndex] = useState<number>(0);
   const swiperRef = useRef<any>(null);
-  const fakeImage = [
-    "https://dims.apnews.com/dims4/default/4c6da07/2147483647/strip/true/crop/5472x3648+0+0/resize/599x399!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F3b%2F0e%2F3c9b8fc76a8a35fba954f9c8fd0f%2F73884efa4b80421fb2b235f245be3e29",
-  ];
+
   return (
-    <div className="min-[1500px]:w-[calc(100%-(400px+350px+40px))] flex flex-col items-start gap-y-5 overflow-hidden">
+    <div className="w-full xl:w-[calc(100%-(400px+350px+40px))] flex flex-col items-start gap-y-5 overflow-hidden">
       <LandingSectionsTitle title="اخبار امروز" />
-      <div className="relative w-full h-[500px] rounded-xl ">
+      <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] rounded-xl">
         <Swiper
           onSlideChange={() =>
             swiperRef.current
@@ -36,76 +34,72 @@ export default function NewsSlider() {
           pagination={{ clickable: false }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          <SwiperSlide>
-            <News fakeImages={fakeImage} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <News fakeImages={fakeImage} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <News fakeImages={fakeImage} />
-          </SwiperSlide>
+          {[1, 2, 3].map((_, index) => (
+            <SwiperSlide key={index}>
+              <News />
+            </SwiperSlide>
+          ))}
         </Swiper>
-        <div className="absolute bottom-4 right-[50%] translate-x-[50%] flex items-center gap-x-1 z-200">
-          {[1, 2, 3].map((item, index) => {
-            return (
-              <div
-                key={index}
-                className={`rounded-full w-2 h-2 ${
-                  pictureIndex === index ? "w-8 bg-[#0097A7]" : "bg-neutral-700"
-                } transition-all duration-200`}
-              ></div>
-            );
-          })}
+        
+        <div className="absolute bottom-4 right-[50%] translate-x-[50%] flex items-center gap-x-1.5 z-20">
+          {[1, 2, 3].map((_, index) => (
+            <div
+              key={index}
+              className={`rounded-full transition-all duration-200 ${
+                pictureIndex === index 
+                  ? "w-6 sm:w-8 h-2 bg-[#0097A7]" 
+                  : "w-2 h-2 bg-neutral-400"
+              }`}
+            />
+          ))}
         </div>
+        
         <motion.div
-          onClick={() => swiperRef.current.slidePrev()}
+          onClick={() => swiperRef.current?.slidePrev()}
           whileTap={{ scale: 0.95 }}
-          className="z-2 flex items-center justify-center absolute top-[45%] translate-y-[-50%] rounded-full p-3 text-white backdrop-blur sm bg-[#00000074] right-1"
+          className="absolute top-1/2 -translate-y-1/2 right-2 sm:right-4 z-20 flex items-center justify-center rounded-full p-2 sm:p-3 text-white backdrop-blur-sm bg-[#00000074] cursor-pointer"
         >
-          <ChevronRight size={25} />
+          <ChevronRight size={20} className="sm:size-[25px]" />
         </motion.div>
+        
         <motion.div
-          onClick={() => swiperRef.current.slideNext()}
+          onClick={() => swiperRef.current?.slideNext()}
           whileTap={{ scale: 0.95 }}
-          
-          className="z-2 flex items-center justify-center absolute top-[45%] translate-y-[-50%] rounded-full p-3 text-white backdrop-blur sm bg-[#00000074] left-1"
+          className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 z-20 flex items-center justify-center rounded-full p-2 sm:p-3 text-white backdrop-blur-sm bg-[#00000074] cursor-pointer"
         >
-          <ChevronLeft size={25} />
+          <ChevronLeft size={20} className="sm:size-[25px]" />
         </motion.div>
       </div>
     </div>
   );
 }
 
-export const News = ({ fakeImages }: { fakeImages: string[] }) => {
+export const News = () => {
   return (
-    <div className="relative w-full h-[500px] z-1 overflow-hidden rounded-xl">
+    <div className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-xl">
       <Image
-        className="absolute inset-0 rounded-xl h-[500px] w-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         draggable={false}
         width={1000}
         height={1000}
         unoptimized
-        src={fakeImages[0]}
+        src="https://images.chesscomfiles.com/uploads/v1/news/1906086.4306076f.630x354o.2ad6790d4340@2x.png"
         alt="برد علیرضا فیروزجا در مسابقات"
       />
-
-      <div className="z-2 flex flex-col items-start gap-y-4 absolute bottom-0 w-full pb-8 px-16 bg-linear-to-b from-transparent to-70% via-15%  via-[#0505056d] to-[#000000d7]">
-        {" "}
-        <div className="px-4 py-2 rounded-lg bg-green-600 text-white text-sm">
+      <div className="absolute bottom-0 w-full px-4 sm:px-8 md:px-16 pb-6 sm:pb-8 flex flex-col items-start gap-y-3 sm:gap-y-4 bg-gradient-to-b from-transparent via-[#0505056d] to-[#000000d7]">
+        <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-green-600 text-white text-xs sm:text-sm">
           شطرنج فیده
         </div>
-        <h1 className="font-bold text-white text-3xl leading-[35px]">
+        <h1 className="font-bold text-white text-xl sm:text-2xl md:text-3xl leading-tight sm:leading-[35px]">
           علیرضا فیروزجا مسابقات فیده را به آتش کشید
         </h1>
         <span className="w-full h-[0.3px] bg-neutral-200" />
-        <h1 className="font-semibold text-white text-xl leading-[35px]">
+        <h1 className="font-semibold text-white text-base sm:text-lg md:text-xl leading-tight sm:leading-[35px]">
           علیرضا فیروزجا در مسابقات فیده هم را شکست داد حتی مگنوس کارلسن
         </h1>
         <div className="text-white flex items-center gap-x-2">
-          <CalendarRange size={18} />
-          <h5 className="text-lg">
+          <CalendarRange size={16} className="sm:size-[18px]" />
+          <h5 className="text-xs sm:text-sm md:text-base">
             {convertToFarsiNumbers("تاریخ انتشار: 1404/09/08")}
           </h5>
         </div>
