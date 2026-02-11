@@ -6,5 +6,6 @@ export interface RegularNewsContainer {
   date: string;
   cat: string;
   isInGrid?: boolean;
+  details: string;
   id: number;
 }
